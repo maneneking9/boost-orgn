@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+/* ══════════════════════════════════════════
+   LIGHT MODE — BRIGHT, BOLD, HIGH CONTRAST
+══════════════════════════════════════════ */
+:root {
+  --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Backgrounds — warm white, not cold */
+  --bg:           #fafafa;
+  --bg-soft:      #f3f4f8;
+  --bg-card:      #ffffff;
+  --bg-elevated:  #ffffff;
+
+  /* Borders */
+  --border:       #dde1ec;
+  --border-soft:  #eceef5;
+
+  /* Text — maximum contrast */
+  --text-h:       #0a0c14;   /* near-black headings */
+  --text:         #2d3348;   /* dark body text */
+  --text-muted:   #6b7280;
+
+  /* Accent — deep electric indigo */
+  --accent:       #4f35f3;
+  --accent-hover: #3d27d4;
+  --accent-bg:    rgba(79, 53, 243, 0.07);
+  --accent-mid:   rgba(79, 53, 243, 0.18);
+  --accent-border:rgba(79, 53, 243, 0.25);
+
+  /* Status */
+  --green:        #15803d;
+  --green-bg:     rgba(21, 128, 61, 0.08);
+  --red:          #b91c1c;
+
+  /* Shadows — warm, soft depth */
+  --shadow-xs:    0 1px 3px rgba(10,12,20,0.07);
+  --shadow-sm:    0 2px 8px rgba(10,12,20,0.09);
+  --shadow:       0 4px 20px rgba(10,12,20,0.10);
+  --shadow-md:    0 8px 32px rgba(10,12,20,0.12);
+  --shadow-lg:    0 20px 60px rgba(10,12,20,0.14);
+  --shadow-accent:0 8px 28px rgba(79,53,243,0.22);
+
+  /* Radius */
+  --r-xs:   4px;
+  --r-sm:   8px;
+  --r:      12px;
+  --r-md:   16px;
+  --r-lg:   24px;
+  --r-xl:   32px;
+  --r-full: 9999px;
+
+  /* Transition */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --t:    0.2s var(--ease);
+
+  /* code-bg alias */
+  --code-bg: var(--bg-soft);
+
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 600;           /* base bold */
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ══════════════════════════════════════════
+   DARK MODE
+══════════════════════════════════════════ */
+:root.dark {
+  --bg:           #0b0c12;
+  --bg-soft:      #111219;
+  --bg-card:      #16171f;
+  --bg-elevated:  #1c1d28;
+
+  --border:       #22253a;
+  --border-soft:  #1a1c2a;
+
+  --text-h:       #f0f2ff;
+  --text:         #b0b8d0;
+  --text-muted:   #5a6280;
+
+  --accent:       #7c6aff;
+  --accent-hover: #9180ff;
+  --accent-bg:    rgba(124,106,255,0.10);
+  --accent-mid:   rgba(124,106,255,0.22);
+  --accent-border:rgba(124,106,255,0.28);
+
+  --green:        #22c55e;
+  --green-bg:     rgba(34,197,94,0.10);
+  --red:          #f87171;
+
+  --shadow-xs:    0 1px 3px rgba(0,0,0,0.35);
+  --shadow-sm:    0 2px 8px rgba(0,0,0,0.45);
+  --shadow:       0 4px 20px rgba(0,0,0,0.55);
+  --shadow-md:    0 8px 32px rgba(0,0,0,0.60);
+  --shadow-lg:    0 20px 60px rgba(0,0,0,0.65);
+  --shadow-accent:0 8px 28px rgba(124,106,255,0.30);
+
+  --code-bg: var(--bg-soft);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.dark):not(.light) {
+    --bg:#0b0c12; --bg-soft:#111219; --bg-card:#16171f; --bg-elevated:#1c1d28;
+    --border:#22253a; --border-soft:#1a1c2a;
+    --text-h:#f0f2ff; --text:#b0b8d0; --text-muted:#5a6280;
+    --accent:#7c6aff; --accent-hover:#9180ff;
+    --accent-bg:rgba(124,106,255,0.10); --accent-mid:rgba(124,106,255,0.22);
+    --accent-border:rgba(124,106,255,0.28);
+    --green:#22c55e; --green-bg:rgba(34,197,94,0.10); --red:#f87171;
+    --shadow-xs:0 1px 3px rgba(0,0,0,0.35); --shadow-sm:0 2px 8px rgba(0,0,0,0.45);
+    --shadow:0 4px 20px rgba(0,0,0,0.55); --shadow-md:0 8px 32px rgba(0,0,0,0.60);
+    --shadow-lg:0 20px 60px rgba(0,0,0,0.65);
+    --code-bg:#111219;
+    color-scheme: dark;
+  }
+}
+
+/* ══════════════════════════════════════════
+   RESET
+══════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); }
+#root { width: 100%; min-height: 100svh; display: flex; flex-direction: column; }
+
+/* ══════════════════════════════════════════
+   TYPOGRAPHY — BOLD EVERYWHERE
+══════════════════════════════════════════ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font);
+  font-weight: 900;
+  color: var(--text-h);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+h1 { font-size: clamp(34px, 5.5vw, 58px); }
+h2 { font-size: clamp(24px, 3.5vw, 38px); }
+h3 { font-size: clamp(16px, 2vw, 20px); font-weight: 800; }
+h4 { font-size: 16px; font-weight: 800; }
+
+p  { font-weight: 600; color: var(--text); margin: 0; }
+strong { font-weight: 900; color: var(--text-h); }
+label  { font-weight: 700; color: var(--text-h); }
+span   { font-weight: inherit; }
+li     { font-weight: 600; }
+button { font-family: var(--font); font-weight: 700; }
+input, textarea, select { font-family: var(--font); font-weight: 600; }
+
+::selection { background: var(--accent-mid); color: var(--accent); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-mid); }
