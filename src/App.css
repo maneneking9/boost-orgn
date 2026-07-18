@@ -1181,6 +1181,7 @@
   position: sticky; top: 0; z-index: 300;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 28px; height: 66px;
+  flex-wrap: wrap;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
@@ -1193,7 +1194,16 @@
   to   { transform: translateY(0);     opacity: 1; }
 }
 
-/* Brand */
+/* Brand + Top phone */
+.nb-phone-top {
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 2px 0 6px;
+}
+
 .nb-brand {
   display: flex; align-items: center; gap: 9px;
   cursor: pointer; flex-shrink: 0; user-select: none;
@@ -1203,6 +1213,12 @@
 .nb-brand-emoji { font-size: 26px; line-height: 1; filter: drop-shadow(0 2px 4px rgba(79,53,243,0.3)); }
 .nb-brand-name { font-size: 18px; font-weight: 700; color: var(--text-h); letter-spacing: -0.4px; }
 .nb-brand-name strong { color: var(--accent); font-weight: 900; }
+
+.nb-phone-top { display: none; }
+@media (max-width: 860px) {
+  .nb-phone-top { display: block; }
+}
+
 
 /* Center nav container */
 .nb-center { flex: 1; display: flex; justify-content: center; }

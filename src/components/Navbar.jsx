@@ -22,7 +22,7 @@ const SERVICE_LINKS = [
   { name: 'Video Editing',    icon: '🎬', desc: 'Professional editing' },
 ]
 
-export default function Navbar({ page, setPage, dark, setDark, cartCount, onCartOpen, onAccountOpen }) {
+export default function Navbar({ page, setPage, dark, setDark, cartCount, onCartOpen, onAccountOpen, brandPhone }) {
   const [menuOpen, setMenuOpen]         = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [ripple, setRipple]             = useState(null)
@@ -54,8 +54,9 @@ export default function Navbar({ page, setPage, dark, setDark, cartCount, onCart
       {/* ── Brand ── */}
       <div className="nb-brand" onClick={() => go('home')}>
         <span className="nb-brand-emoji">🛍️</span>
-        <span className="nb-brand-name">Ayaba<strong>Shop</strong></span>
+        <span className="nb-brand-name">animo<strong>it ltd</strong></span>
       </div>
+      {brandPhone && <div className="nb-phone-top">📞 {brandPhone}</div>}
 
       {/* ── Desktop nav — right to left ── */}
       <div className="nb-center">

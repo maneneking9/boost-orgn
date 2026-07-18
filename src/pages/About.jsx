@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="about-page">
       <div className="about-hero">
-        <h1>About Ayaba Shop</h1>
+<h1>About animo it ltd</h1>
         <p>We are a modern e-commerce platform dedicated to bringing you the best products and services at unbeatable prices.</p>
       </div>
       <div className="about-grid">
