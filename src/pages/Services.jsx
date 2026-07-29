@@ -4,89 +4,25 @@ import { getServices, toggleFavorite, isFavorite, getReviews, addReview, deleteR
 const fmt = (n) => `RWF ${n.toLocaleString('en-RW')}`
 
 const SUB_OPTIONS = {
-  14: {
-    label: 'MTN MoMo — Choose Operation',
+  1: {
+    label: 'Graphic Design — Choose Service',
     options: [
-      { id: 'mtn-1', name: 'Send Money',             icon: '💸', price: 200, desc: 'Send money to any MTN number' },
-      { id: 'mtn-2', name: 'Withdraw Cash',           icon: '🏧', price: 300, desc: 'Withdraw cash from MoMo wallet' },
-      { id: 'mtn-3', name: 'Pay Bill',                icon: '🧾', price: 100, desc: 'Pay electricity, water, DSTV & more' },
-      { id: 'mtn-4', name: 'Buy Airtime',             icon: '📶', price: 50,  desc: 'Top up MTN airtime instantly' },
-      { id: 'mtn-5', name: 'Buy Data Bundle',         icon: '🌐', price: 100, desc: 'Purchase MTN internet bundles' },
-      { id: 'mtn-6', name: 'MoMo Pay (Merchant)',     icon: '🏪', price: 100, desc: 'Pay at shops using MoMo Pay' },
-      { id: 'mtn-7', name: 'International Transfer',  icon: '🌍', price: 500, desc: 'Send money abroad via MoMo' },
-    ],
-  },
-  15: {
-    label: 'Airtel Money — Choose Operation',
-    options: [
-      { id: 'air-1', name: 'Send Money',        icon: '💸', price: 200, desc: 'Send money to any Airtel number' },
-      { id: 'air-2', name: 'Withdraw Cash',     icon: '🏧', price: 300, desc: 'Withdraw cash from Airtel wallet' },
-      { id: 'air-3', name: 'Pay Utility Bill',  icon: '🧾', price: 100, desc: 'Pay WASAC, REG, DSTV & more' },
-      { id: 'air-4', name: 'Buy Airtime',       icon: '📶', price: 50,  desc: 'Top up Airtel airtime instantly' },
-      { id: 'air-5', name: 'Buy Data Bundle',   icon: '🌐', price: 100, desc: 'Purchase Airtel internet bundles' },
-      { id: 'air-6', name: 'Merchant Payment',  icon: '🏪', price: 100, desc: 'Pay at shops using Airtel Money' },
-    ],
-  },
-  12: {
-    label: 'Bank of Kigali — Choose Service',
-    options: [
-      { id: 'bk-1', name: 'Cash Deposit',    icon: '💰', price: 300, desc: 'Deposit cash into any BK account' },
-      { id: 'bk-2', name: 'Cash Withdrawal', icon: '🏧', price: 400, desc: 'Withdraw cash from BK account' },
-      { id: 'bk-3', name: 'Fund Transfer',   icon: '🔄', price: 300, desc: 'Transfer funds between accounts' },
-      { id: 'bk-4', name: 'Account Opening', icon: '📋', price: 0,   desc: 'Open a new BK account (free)' },
-      { id: 'bk-5', name: 'Balance Inquiry', icon: '📊', price: 0,   desc: 'Check your BK account balance (free)' },
-      { id: 'bk-6', name: 'Mini Statement',  icon: '🧾', price: 200, desc: 'Print last 5 transactions' },
-      { id: 'bk-7', name: 'Bill Payment',    icon: '💡', price: 100, desc: 'Pay utilities via BK agent' },
-    ],
-  },
-  13: {
-    label: 'Equity Bank — Choose Service',
-    options: [
-      { id: 'eq-1', name: 'Cash Deposit',         icon: '💰', price: 300, desc: 'Deposit cash into Equity account' },
-      { id: 'eq-2', name: 'Cash Withdrawal',       icon: '🏧', price: 400, desc: 'Withdraw from Equity account' },
-      { id: 'eq-3', name: 'Loan Inquiry',          icon: '📋', price: 0,   desc: 'Check loan eligibility (free)' },
-      { id: 'eq-4', name: 'Account Services',      icon: '🏦', price: 200, desc: 'Account updates & management' },
-      { id: 'eq-5', name: 'Mobile Banking Help',   icon: '📱', price: 0,   desc: 'Equitel setup & support (free)' },
-      { id: 'eq-6', name: 'Fund Transfer',         icon: '🔄', price: 300, desc: 'Transfer to any bank account' },
+      { id: 'gd-1', name: 'Banner Design',             icon: '🖼️', price: 2000, desc: 'Custom banners for social media & print' },
+      { id: 'gd-2', name: 'Sticker Design',            icon: '🏷️', price: 1500, desc: 'Creative sticker designs for branding' },
+      { id: 'gd-3', name: 'Flyer',                     icon: '📄', price: 2500, desc: 'Eye-catching flyers for events & promos' },
+      { id: 'gd-4', name: 'Certificate',               icon: '🏆', price: 3000, desc: 'Professional certificate templates' },
+      { id: 'gd-5', name: 'Invitation',                icon: '💌', price: 2000, desc: 'Beautiful invitations for all occasions' },
+      { id: 'gd-6', name: 'One Ways Sticker Design',   icon: '🚀', price: 1800, desc: 'Unique one-way sticker concepts' },
+      { id: 'gd-7', name: 'Branding',                  icon: '✨', price: 5000, desc: 'Complete branding identity package' },
     ],
   },
 }
 
-const _STATIC_SERVICES = [
-  { id: 1,  name: 'Basic Delivery',       icon: '📦', category: 'Delivery',      price: 2000,  duration: 'Iminsi 5–7',  description: 'Gutanga bisanzwe kuri irembo ryawe.',                                            features: ['Numero yo gukurikirana', 'SMS imenyesha', 'Paketi nziza'],                                              tax: 0.0 },
-  { id: 2,  name: 'Express Delivery',     icon: '🚀', category: 'Delivery',      price: 5000,  duration: 'Iminsi 1–2',  description: 'Gutanga vuba cyane ku bikorwa bihutirwa.',                                        features: ['Gutunga mbere', 'Gukurikirana kuri live', 'Umukono usabwa'],                                            tax: 0.0 },
-  { id: 3,  name: 'Premium Membership',   icon: '⭐', category: 'Membership',    price: 9900,  duration: 'Ukwezi',      description: 'Fungura amasezerano yihariye no gutanga ubuntu.',                                 features: ['Gutanga ubuntu ku bikorwa byose', 'Kugabanya 10%', 'Kwinjira mbere ku macuruzwa', 'Inkunga ya mbere'], tax: 0.0 },
-  { id: 4,  name: 'Product Insurance',    icon: '🛡️', category: 'Protection',    price: 3500,  duration: 'Ku kintu',    description: 'Kurinzwa byuzuye ibyangiritse cyangwa ibihombye.',                               features: ['Kurinzwa ibyangiritse', 'Kurinzwa ibihombye', 'Iminsi 30 yo gutanga ikirego', 'Inkunga 24/7'],         tax: 0.0 },
-  { id: 5,  name: 'Gift Wrapping',        icon: '🎁', category: 'Extra',         price: 1500,  duration: 'Ku itumba',   description: "Gupakira impano nziza hamwe n'ubutumwa bwite.",                                   features: ['Impapuro nziza zo gupakira', 'Ruban & bow', 'Ikarita yihariye'],                                        tax: 0.0 },
-  { id: 6,  name: 'Installation Service', icon: '🔧', category: 'Extra',         price: 15000, duration: 'Rimwe',       description: "Gushyiraho n'inzobere mu rugo rwawe.",                                            features: ['Inzobere yemejwe', 'Serivisi uwo munsi', "Garantiya y'umwaka 1", 'Gusura ubuntu'],                    tax: 0.0 },
-  { id: 7,  name: 'Irembo Services',      icon: '🏛️', category: 'Gov & Finance', price: 500,   duration: 'Ku gusaba',   description: 'Saba serivisi za leta kuri Irembo — viza, impamyabumenyi, uburenganzira.',       features: ["Impamyabumenyi y'amavuko/ubukwe", 'Gusaba viza', "Uburenganzira bw'ubucuruzi", 'Gutunga vuba'],       tax: 0.0 },
-  { id: 8,  name: 'RRA Tax Services',     icon: '🧾', category: 'Gov & Finance', price: 1000,  duration: 'Ku gutanga',  description: 'Gutanga imisoro ya RRA, kwiyandikisha TIN & imenyesha.',                          features: ['Kwiyandikisha TIN', 'Gutanga TVA', "Imisoro y'umusaruro", 'Inkunga ya e-tax'],                         tax: 0.0 },
-  { id: 9,  name: 'Printing Services',    icon: '🖨️', category: 'Digital',       price: 150,   duration: 'Ku ipaji',    description: 'Gucapura byiza — inyandiko, amafoto, ibendera & byinshi.',                        features: ['Gucapura amabara & B/W', 'Guskanisha & gukopera', 'Lamination', 'Gucapura binini'],                    tax: 0.0 },
-  { id: 10, name: 'Video Editing',        icon: '🎬', category: 'Digital',       price: 7000,  duration: 'Ku mushinga', description: 'Guhindura video nziza ku bibirori, reklamu, reels & YouTube.',                     features: ['Color grading', 'Motion graphics', 'Gusana amajwi', 'Gutanga vuba'],                                   tax: 0.0 },
-  { id: 11, name: 'Web Development',      icon: '💻', category: 'Digital',       price: 50000, duration: 'Ku mushinga', description: 'Websites & web apps zikorwa ku bwenge bwawe.',                                   features: ['Responsive design', 'E-commerce', 'SEO optimized', "Inkunga y'ukwezi 1 ubuntu"],                       tax: 0.0 },
-  { id: 12, name: 'Agent in BK',          icon: '🏦', category: 'Banking',       price: 0,     duration: 'Ku bikorwa',  description: 'Serivisi za BK agent — gushyira, gukura & kohereza amafaranga.',                  features: ['Gushyira & gukura amafaranga', 'Gufungura konti', 'Kohereza amafaranga', 'Kureba balance'],            tax: 0.0, hasOptions: true },
-  { id: 13, name: 'Equity Bank Agent',    icon: '💳', category: 'Banking',       price: 0,     duration: 'Ku bikorwa',  description: 'Serivisi za Equity Bank agent — banki aho uri hose.',                            features: ['Gushyira & gukura', 'Kureba inguzanyo', 'Serivisi za konti', 'Inkunga ya mobile banking'],             tax: 0.0, hasOptions: true },
-  { id: 14, name: 'MTN MoMo',             icon: '📱', category: 'Mobile Money',  price: 0,     duration: 'Ku bikorwa',  description: 'MTN Mobile Money — kohereza, akira, ishyura fagitire & gura airtime.',            features: ['Kohereza & akira amafaranga', 'Kwishyura fagitire', 'Gura airtime', 'MoMo Pay'],                       tax: 0.0, hasOptions: true },
-  { id: 15, name: 'Airtel Money',         icon: '📲', category: 'Mobile Money',  price: 0,     duration: 'Ku bikorwa',  description: 'Serivisi za Airtel Money — ibikorwa vuba kandi neza.',                           features: ['Kohereza amafaranga', 'Kwishyura fagitire', 'Airtime & data', 'Kwishyura ku bucuruzi'],                 tax: 0.0, hasOptions: true },
-]
-
-
 const MSG_HINTS = {
-  1:  'e.g. Deliver to KG 5 Ave, Kigali — leave at gate',
-  2:  'e.g. Urgent delivery to Remera by 3pm today',
-  3:  'e.g. Full name: John Doe, Phone: 078...',
-  4:  'e.g. Insure my laptop — Samsung Galaxy Book',
-  5:  'e.g. Gift message: Happy Birthday Sarah! 🎂',
-  6:  'e.g. Install TV wall mount at KN 3 Rd, 2nd floor',
-  7:  'e.g. I need a birth certificate for my child',
-  8:  'e.g. Register TIN for my new business',
-  9:  'e.g. Print 10 pages color + 5 pages B&W, A4 size',
-  10: 'e.g. Edit 3-min wedding video, add music & transitions',
-  11: 'e.g. E-commerce site for clothing shop, 50 products',
-  12: 'e.g. Deposit RWF 50,000 to account 0001234567',
-  13: 'e.g. Withdraw RWF 20,000 from Equity account',
-  14: 'e.g. Send RWF 5,000 to 0781234567',
-  15: 'e.g. Pay WASAC bill — meter number 12345',
+  1: 'e.g. I need a banner design for my business event',
+  2: 'e.g. Record a promotional video for my restaurant',
+  3: 'e.g. Wedding photography at Kigali Convention Centre',
+  4: 'e.g. Live stream my graduation ceremony on Facebook',
 }
 
 export default function Services({ addToCart, addToast }) {

@@ -10,16 +10,10 @@ const NAV = [
 ]
 
 const SERVICE_LINKS = [
-  { name: 'Basic Delivery',   icon: '📦', desc: 'Fast & reliable delivery' },
-  { name: 'Irembo',           icon: '🏛️', desc: 'Government services' },
-  { name: 'RRA Tax',          icon: '🧾', desc: 'Tax filing & TIN' },
-  { name: 'MTN MoMo',         icon: '📱', desc: 'Mobile money transfers' },
-  { name: 'Airtel Money',     icon: '📲', desc: 'Airtel transactions' },
-  { name: 'Agent BK',         icon: '🏦', desc: 'Bank of Kigali agent' },
-  { name: 'Equity Bank',      icon: '💳', desc: 'Equity Bank agent' },
-  { name: 'Printing',         icon: '🖨️', desc: 'Print, scan & copy' },
-  { name: 'Web Dev',          icon: '💻', desc: 'Custom websites & apps' },
-  { name: 'Video Editing',    icon: '🎬', desc: 'Professional editing' },
+  { name: 'Graphic Design',    icon: '🎨', desc: 'Branding, banners, flyers & more' },
+  { name: 'Video Production',  icon: '🎬', desc: 'Professional video for all needs' },
+  { name: 'Photography',       icon: '📷', desc: 'Wedding, portrait & event photos' },
+  { name: 'Live Streaming',    icon: '📡', desc: 'Professional live streaming setup' },
 ]
 
 export default function Navbar({ page, setPage, dark, setDark, cartCount, onCartOpen, onAccountOpen, brandPhone }) {

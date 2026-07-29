@@ -4,16 +4,16 @@ import { getAccounts } from '../db'
 import AdminLogin from './AdminLogin'
 
 const GALLERY_API = 'http://localhost:4000/api'
-const GALLERY_CATS = ['Delivery', 'Digital', 'Gov & Finance', 'Banking', 'Mobile Money', 'Extra', 'Membership', 'Protection']
+const GALLERY_CATS = ['Design', 'Media', 'Media Sales', 'Entertainment', 'Electronics', 'IT & Network', 'Education', 'Business', 'Hosting', 'Agents']
 
 const fmt = (n) => `RWF ${(+n).toLocaleString('en-RW')}`
 
 const EMPTY = {
-  name: '', icon: '🛍️', category: 'Digital', price: 0, duration: 'Ku mushinga',
+  name: '', icon: '🛍️', category: 'Design', price: 0, duration: 'Ku mushinga',
   description: '', features: [''], tax: 0.0, photo: null, hasOptions: false,
 }
 
-const CATEGORIES = ['Delivery', 'Membership', 'Protection', 'Extra', 'Gov & Finance', 'Digital', 'Banking', 'Mobile Money']
+const CATEGORIES = ['Design', 'Media', 'Media Sales', 'Entertainment', 'Electronics', 'IT & Network', 'Education', 'Business', 'Hosting', 'Agents']
 
 export default function AdminPanel({ addToast }) {
   const [loggedIn, setLoggedIn] = useState(() => sessionStorage.getItem('admin_auth') === '1')

@@ -108,12 +108,10 @@ const T = {
 }
 
 const FEATURED = [
-  { id: 7,  name: 'Irembo Services',    icon: '🏛️', price: 500,   tax: 0.0,  duration: 'Ku gusaba',     desc: 'Serivisi za leta — viza, impamyabumenyi, uburenganzira' },
-  { id: 14, name: 'MTN MoMo',           icon: '📱', price: 200,   tax: 0.0,  duration: 'Ku bikorwa',    desc: 'Kohereza, akira, ishyura fagitire & gura airtime' },
-  { id: 10, name: 'Video Editing',      icon: '🎬', price: 7000,  tax: 0.0,  duration: 'Ku mushinga',   desc: 'Guhindura video nziza ku bibirori & reklamu' },
-  { id: 11, name: 'Web Development',    icon: '💻', price: 50000, tax: 0.0,  duration: 'Ku mushinga',   desc: 'Websites zikorwa ku bwenge bwawe' },
-  { id: 9,  name: 'Printing Services',  icon: '🖨️', price: 150,   tax: 0.0,  duration: 'Ku ipaji',      desc: 'Gucapura amabara & B/W, guskanisha, lamination' },
-  { id: 8,  name: 'RRA Tax Services',   icon: '🧾', price: 1000,  tax: 0.0,  duration: 'Ku gutanga',    desc: 'Kwiyandikisha TIN, gutanga TVA, inkunga ya e-tax' },
+  { id: 1, name: 'Graphic Design',    icon: '🎨', price: 0,      tax: 0.0, duration: 'Ku mushinga', desc: 'Banner, sticker, flyer, certificate, invitation, branding' },
+  { id: 2, name: 'Video Production',  icon: '🎬', price: 15000,  tax: 0.0, duration: 'Ku mushinga', desc: 'Professional video production for events & promos' },
+  { id: 3, name: 'Photography',       icon: '📷', price: 25000,  tax: 0.0, duration: 'Ku session', desc: 'Wedding, portrait, event & product photography' },
+  { id: 4, name: 'Live Streaming',    icon: '📡', price: 45000,  tax: 0.0, duration: 'Ku event', desc: 'Professional live streaming setup & guidance' },
 ]
 
 function useCountUp(target, duration = 1500) {

@@ -3,40 +3,17 @@ import { useState, useMemo } from 'react'
 const fmt = (n) => `RWF ${Math.round(n).toLocaleString('en-RW')}`
 
 const ALL_SERVICES = [
-  { id: 1,  name: 'Basic Delivery',       icon: '📦', category: 'Delivery',      price: 2000  },
-  { id: 2,  name: 'Express Delivery',     icon: '🚀', category: 'Delivery',      price: 5000  },
-  { id: 3,  name: 'Premium Membership',   icon: '⭐', category: 'Membership',    price: 9900  },
-  { id: 4,  name: 'Product Insurance',    icon: '🛡️', category: 'Protection',    price: 3500  },
-  { id: 5,  name: 'Gift Wrapping',        icon: '🎁', category: 'Extra',         price: 1500  },
-  { id: 6,  name: 'Installation Service', icon: '🔧', category: 'Extra',         price: 15000 },
-  { id: 7,  name: 'Irembo Services',      icon: '🏛️', category: 'Gov & Finance', price: 500   },
-  { id: 8,  name: 'RRA Tax Services',     icon: '🧾', category: 'Gov & Finance', price: 1000  },
-  { id: 9,  name: 'Printing Services',    icon: '🖨️', category: 'Digital',       price: 150   },
-  { id: 10, name: 'Video Editing',        icon: '🎬', category: 'Digital',       price: 7000  },
-  { id: 11, name: 'Web Development',      icon: '💻', category: 'Digital',       price: 50000 },
-  { id: 12, name: 'Agent in BK',          icon: '🏦', category: 'Banking',       price: 300   },
-  { id: 13, name: 'Equity Bank Agent',    icon: '💳', category: 'Banking',       price: 300   },
-  { id: 14, name: 'MTN MoMo',            icon: '📱', category: 'Mobile Money',  price: 200   },
-  { id: 15, name: 'Airtel Money',         icon: '📲', category: 'Mobile Money',  price: 200   },
+  { id: 1, name: 'Graphic Design',    icon: '🎨', category: 'Design',     price: 0 },
+  { id: 2, name: 'Video Production',  icon: '🎬', category: 'Media',      price: 15000 },
+  { id: 3, name: 'Photography',       icon: '📷', category: 'Media',      price: 25000 },
+  { id: 4, name: 'Live Streaming',    icon: '📡', category: 'Media',      price: 45000 },
 ]
 
-// Placeholder hint per service so user knows what to write
 const MSG_HINTS = {
-  1:  'Andika aderesi yawe yo gutangirizwa...',
-  2:  'Andika aderesi & igihe uhitamo gutangirwa...',
-  3:  'Andika amazina yawe yuzuye...',
-  4:  'Andika izina ry\'ibicuruzwa ugomba kurinzwa...',
-  5:  'Andika ubutumwa bw\'impano (optional)...',
-  6:  'Andika aderesi & ubwoko bw\'ibikoresho...',
-  7:  'Andika serivisi ya Irembo uhitamo (urugero: viza, impamyabumenyi)...',
-  8:  'Andika TIN yawe cyangwa ubwoko bw\'imisoro...',
-  9:  'Andika umubare w\'amapaji & ubwoko bwo gucapura...',
-  10: 'Andika ibisobanuro by\'video (igihe, style, etc.)...',
-  11: 'Andika ibisobanuro by\'website uhitamo...',
-  12: 'Andika numero ya konti & umubare w\'amafaranga...',
-  13: 'Andika numero ya konti & serivisi uhitamo...',
-  14: 'Andika numero ya telefoni & umubare w\'amafaranga...',
-  15: 'Andika numero ya telefoni & umubare w\'amafaranga...',
+  1: 'Andika ubwoko bw\'ishusho ukeneye (banner, sticker, flyer, etc.)...',
+  2: 'Andika ibisobanuro by\'video uhitamo (igihe, style, aho)..',
+  3: 'Andika aho wifuza kwifotoza n\'ubwoko bw\'amafoto...',
+  4: 'Andika aho wifuza gukora live stream n\' platform uhitamo...',
 }
 
 const CATEGORIES = ['All', ...new Set(ALL_SERVICES.map(s => s.category))]

@@ -13,7 +13,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-const SECRET = process.env.JWT_SECRET || 'ayaba_secret'
+const SECRET = process.env.JWT_SECRET || 'boost_art_designer_secret'
 const ADMIN_USER = process.env.ADMIN_USERNAME || 'admin'
 const ADMIN_PASS = process.env.ADMIN_PASSWORD || 'admin123'
 
@@ -132,5 +132,5 @@ app.get('/api/admin/stats', auth, (req, res) => {
 })
 
 app.listen(process.env.PORT || 4000, () => {
-  console.log(`✅ Ayaba Shop API running on http://localhost:${process.env.PORT || 4000}`)
+    console.log(`✅ Boost Art Designer API running on http://localhost:${process.env.PORT || 4000}`)
 })
