@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback, useEffect } from 'react'
-import { getServices, toggleFavorite, isFavorite, getReviews, addReview, deleteReview, getRatingSummary } from '../db'
+import { getServices } from '../db'
 
 const fmt = (n) => `RWF ${n.toLocaleString('en-RW')}`
 
