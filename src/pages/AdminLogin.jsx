@@ -29,7 +29,7 @@ export default function AdminLogin({ onLogin }) {
       <div className="login-card">
         <div className="login-icon">⚙️</div>
         <h2>Admin Login</h2>
-        <p className="login-sub">Sign in to manage Ayaba Shop</p>
+<p className="login-sub">Sign in to manage boost art designer</p>
 
         <form className="login-form" onSubmit={submit}>
           <div className="login-field">

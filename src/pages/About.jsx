@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="about-page">
       <div className="about-hero">
-<h1>About animo it ltd</h1>
+<h1>About boost art designer</h1>
         <p>We are a modern e-commerce platform dedicated to bringing you the best products and services at unbeatable prices.</p>
       </div>
       <div className="about-grid">
@@ -26,7 +26,7 @@ export default function About() {
         <h2>Meet Our Team</h2>
         <div className="team-grid">
           {[
-            { name: 'Ayaba K.', role: 'Founder & CEO', avatar: '👩‍💼' },
+{ name: 'Boost A.', role: 'Founder & CEO', avatar: '👩‍💼' },
             { name: 'Samuel T.', role: 'Head of Logistics', avatar: '👨‍💻' },
             { name: 'Liya M.', role: 'Customer Support Lead', avatar: '👩‍🎧' },
           ].map(m => (

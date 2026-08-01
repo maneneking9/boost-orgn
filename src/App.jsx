@@ -80,8 +80,8 @@ export default function App() {
         <div className="footer-inner">
 
             <div className="footer-brand">
-            <div className="footer-logo">🛍️ <span>Animo</span></div>
-            <p className="footer-tagline">Animo it’s your trusted agent for payments, services, media & tech — Kigali-Kabuga.</p>
+            <div className="footer-logo">🛍️ <span>boost art designer</span></div>
+            <p className="footer-tagline">boost art designer — your trusted creative studio for design, media & tech.</p>
             <div className="footer-socials">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Facebook">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -145,7 +145,7 @@ export default function App() {
 
         </div>
         <div className="footer-bottom">
-          <span>© 2025 Ayaba Shop — All rights reserved</span>
+<span>© 2025 boost art designer — All rights reserved</span>
           <span className="footer-secure">🔒 Secure & Trusted</span>
         </div>
       </footer>

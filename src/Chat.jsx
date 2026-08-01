@@ -9,7 +9,7 @@ const SUGGESTED = [
 ]
 
 const RESPONSES = {
-  'What products do you sell?': 'We sell a wide range of fashion, electronics, and home goods at Ayaba Shop!',
+'What products do you sell?': 'We sell a wide range of fashion, electronics, and home goods at boost art designer!',
   'How can I place an order?': 'Browse our catalog, add items to your cart, and proceed to checkout.',
   'What are your delivery options?': 'We offer standard (5-7 days) and express (1-2 days) delivery.',
   'How do I return an item?': 'Contact us within 14 days of delivery to initiate a return.',
@@ -19,7 +19,7 @@ const RESPONSES = {
 export default function Chat() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState([
-    { from: 'bot', text: 'Hi! Welcome to Ayaba Shop 👋 How can I help you today?' },
+{ from: 'bot', text: 'Hi! Welcome to boost art designer 👋 How can I help you today?' },
   ])
   const [input, setInput] = useState('')
 
@@ -47,7 +47,7 @@ export default function Chat() {
       </button>
       {open && (
         <div className="chat-box">
-          <div className="chat-header">Ayaba Shop Support</div>
+<div className="chat-header">boost art designer Support</div>
           <div className="chat-messages">
             {messages.map((m, i) => (
               <div key={i} className={`chat-msg ${m.from}`}>{m.text}</div>

@@ -4,8 +4,8 @@ const fmt = (n) => `RWF ${n.toLocaleString('en-RW')}`
 
 const T = {
   en: {
-    badge: '🛍️ Welcome to Ayaba Shop',
-    title: 'Shop Smarter,\nLive Better',
+    badge: '🛍️ Welcome to boost art designer',
+    title: 'Design Smarter,\nLive Better',
     sub: 'Discover premium products and services tailored just for you. Fast delivery, great prices, and exceptional support.',
     explore: 'Explore Services',
     contact: 'Contact Us',
@@ -13,7 +13,7 @@ const T = {
     premium: 'Premium Quality', premiumSub: 'Top-rated products',
     secure: 'Secure Payment', secureSub: '100% protected',
     statsLabels: ['Happy Customers', 'Products Available', 'On-time Delivery', 'Average Rating'],
-    whyTitle: 'Why Choose Ayaba Shop?',
+    whyTitle: 'Why Choose boost art designer?',
     features: [
       { icon: '🚀', title: 'Express Delivery', desc: 'Get your orders delivered in as fast as 24 hours with our express service.' },
       { icon: '💰', title: 'Best Prices', desc: 'We guarantee the best prices on all products with our price-match policy.' },
@@ -49,13 +49,13 @@ const T = {
     langTitle: '🌐 Language / Ururimi',
     testimonials: 'What Our Customers Say',
     reviews: [
-      { name: 'Amina K.', text: 'Ayaba Shop made my Irembo application so easy! Fast and reliable.', stars: 5 },
+      { name: 'Amina K.', text: 'boost art designer made my design request so easy! Fast and reliable.', stars: 5 },
       { name: 'Jean P.', text: 'I applied for 3 services at once and everything was processed the same day!', stars: 5 },
       { name: 'Grace M.', text: 'The video editing service is top quality. Highly recommend!', stars: 5 },
     ],
   },
   rw: {
-    badge: '🛍️ Murakaza neza kuri Ayaba Shop',
+    badge: '🛍️ Murakaza neza kuri boost art designer',
     title: 'Gura Neza,\nBana Neza',
     sub: 'Shakisha serivisi nziza zikurikirana nawe. Gutanga vuba, ibiciro byiza, n\'inkunga idasanzwe.',
     explore: 'Reba Serivisi',
@@ -64,7 +64,7 @@ const T = {
     premium: 'Ubwiza Bw\'Ikirenga', premiumSub: 'Ibicuruzwa byiza cyane',
     secure: 'Kwishyura Neza', secureSub: 'Birindwa 100%',
     statsLabels: ['Abakiriya Bashimye', 'Ibicuruzwa Bihari', 'Gutangwa Ku Gihe', 'Amanota Asanzwe'],
-    whyTitle: 'Kuki Uhitamo Ayaba Shop?',
+    whyTitle: 'Kuki Uhitamo boost art designer?',
     features: [
       { icon: '🚀', title: 'Gutanga Vuba', desc: 'Ibicuruzwa byawe bitangwa mu masaha 24 gusa.' },
       { icon: '💰', title: 'Ibiciro Byiza', desc: 'Tuguranisha ibiciro byiza cyane ku bicuruzwa byose.' },
@@ -100,7 +100,7 @@ const T = {
     langTitle: '🌐 Language / Ururimi',
     testimonials: 'Abakiriya Bacu Bavuga Iki?',
     reviews: [
-      { name: 'Amina K.', text: 'Ayaba Shop yampaye ubufasha bwo gusaba Irembo vuba! Ni byiza cyane.', stars: 5 },
+      { name: 'Amina K.', text: 'boost art designer yampaye ubufasha bwo gukora design vuba! Ni byiza cyane.', stars: 5 },
       { name: 'Jean P.', text: 'Nasabye serivisi 3 rimwe kandi byose byakozwe uwo munsi!', stars: 5 },
       { name: 'Grace M.', text: 'Serivisi yo guhindura video ni nziza cyane. Ndayisaba!', stars: 5 },
     ],

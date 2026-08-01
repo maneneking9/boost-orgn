@@ -48,7 +48,7 @@ export default function Navbar({ page, setPage, dark, setDark, cartCount, onCart
       {/* ── Brand ── */}
       <div className="nb-brand" onClick={() => go('home')}>
         <span className="nb-brand-emoji">🛍️</span>
-        <span className="nb-brand-name">animo<strong>it ltd</strong></span>
+<span className="nb-brand-name">boost art <strong>designer</strong></span>
       </div>
       {brandPhone && <div className="nb-phone-top">📞 {brandPhone}</div>}
 
