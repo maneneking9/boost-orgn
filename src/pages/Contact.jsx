@@ -23,7 +23,7 @@ export default function Contact({ addToast }) {
         <div className="contact-info">
           {[
             { icon: '📍', label: 'Address', value: '123 Design Street, Addis Ababa, Ethiopia' },
-            { icon: '📞', label: 'Phone', value: '+251 911 000 000' },
+{ icon: '📞', label: 'Phone', value: '0784270825 / 0791981419' },
             { icon: '📧', label: 'Email', value: 'support@boostartdesigner.com' },
             { icon: '🕐', label: 'Hours', value: 'Mon–Sat: 8am – 8pm' },
           ].map(i => (
